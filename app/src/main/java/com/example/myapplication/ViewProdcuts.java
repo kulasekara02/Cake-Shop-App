@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class ViewProdcuts extends AppCompatActivity {
 
-
+//
     private EditText TextProductId, TextProductName, TextPrice, TextQty, TextCategory, TextQtyNeed, TextInvoiceId, TextTotal;
     private TextView TextErrorMsg;
     private Button ButtonSearchProduct, ButtonBuy;

@@ -33,8 +33,8 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-       // Toolbar toolbar = findViewById(R.id.toolbar);
-      //  setSupportActionBar(toolbar);
+     Toolbar toolbar = findViewById(R.id.toolbar);
+       setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -73,19 +73,19 @@ public class Register extends AppCompatActivity {
     }
 
 
-    // protected void createDatabase() {
-    //     try {
-    //         db = openOrCreateDatabase("85DB", Context.MODE_PRIVATE, null);
+    protected void createDatabase() {
+        try {
+            db = openOrCreateDatabase("85DB", Context.MODE_PRIVATE, null);
 
-    //         db.execSQL("CREATE TABLE IF NOT EXISTS ResgisterUser (UserId VARCHAR PRIMARY KEY  NOT NULL,Password VARCHAR,UserType VARCHAR);");
+            db.execSQL("CREATE TABLE IF NOT EXISTS ResgisterUser (UserId VARCHAR PRIMARY KEY  NOT NULL,Password VARCHAR,UserType VARCHAR);");
 
-    //         Toast.makeText(getApplicationContext(), "database created Successfully",
-    //                 Toast.LENGTH_LONG).show();
-    //     } catch (Exception ex) {
-    //         TextErrorMsg.setText("Error creating DB" + ex);
+            Toast.makeText(getApplicationContext(), "database created Successfully",
+                    Toast.LENGTH_LONG).show();
+        } catch (Exception ex) {
+            TextErrorMsg.setText("Error creating DB" + ex);
 
-    //     }
-    // }
+        }
+    }
 
 
     protected void insertIntoDb() {
